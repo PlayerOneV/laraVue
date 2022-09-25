@@ -60,8 +60,8 @@
 </template>
 
 <script>
-import Layout from "../Shared/Layout.vue";
-import Pagination from "../Shared/Pagination.vue";
+import Layout from "../../Shared/Layout.vue";
+import Pagination from "../../Shared/Pagination.vue";
 
 export default {
   layout: Layout,
