@@ -20,8 +20,9 @@ Route::get('/', function () {
 });
 
 Route::get('/users', function () {
-    sleep(2);
-    return Inertia::render('Users');
+    return Inertia::render('Users', [
+        'time' => now()->toTimeString(),
+    ]);
 });
 
 Route::get('/settings', function () {
@@ -36,4 +37,4 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
